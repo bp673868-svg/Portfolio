@@ -8,7 +8,7 @@ export const Bio = {
     "I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.",
   github: "https://github.com/Aashish07-Alpha",
   resume:
-    "https://drive.google.com/file/d/1vOx9h0MSmgm5O8CAilSXmrAA0xeG1l1t/view?usp=sharing",
+    "https://drive.google.com/file/d/1JWv2_OMBilCk8uZiqB4OpqJ9Vi9TqljP/view?usp=drive_link",
   linkedin: "https://www.linkedin.com/in/aashish-suryawanshi/",
 
 };
@@ -62,7 +62,11 @@ export const skills = [
         image:
           "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K",
       },
-
+      {
+        name: "Express.js",
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg",
+      },
       {
         name: "Node Js",
         image: "https://nodejs.org/static/images/logo.svg",
@@ -86,6 +90,41 @@ export const skills = [
         name: "GitHub",
         image:
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbqj9Ii13d6hx5a9kyLnC5A8A96LDSaSZv_w&s",
+      },
+      {
+        name: "Render",
+        image:
+          "https://render.com/static/logo-render.svg",
+      },
+      {
+        name: "Vercel",
+        image:
+          "https://assets.vercel.com/image/upload/q_auto/front/assets/design/vercel-triangle-black.svg",
+      },
+      {
+        name: "RESTful APIs",
+        image:
+          "https://www.vectorlogo.zone/logos/restful/restful-icon.svg",
+      },
+      {
+        name: "JWT Auth",
+        image:
+          "https://jwt.io/img/pic_logo.svg",
+      },
+    ],
+  },
+  {
+    title: "Development Practices",
+    skills: [
+      {
+        name: "Full-stack Development",
+        image:
+          "https://cdn-icons-png.flaticon.com/512/1087/1087840.png",
+      },
+      {
+        name: "Database Management",
+        image:
+          "https://cdn-icons-png.flaticon.com/512/4248/4248443.png",
       },
     ],
   },
@@ -119,6 +158,26 @@ export const skills = [
           "https://semantsir.in/static/images-hub/8-6-2023/1686165518248-computer-network1Resize.jpg",
       },
       
+    ],
+  },
+  {
+    title: "Soft Skills",
+    skills: [
+      {
+        name: "Time Management",
+        image:
+          "https://cdn-icons-png.flaticon.com/512/2972/2972543.png",
+      },
+      {
+        name: "Active Listening",
+        image:
+          "https://cdn-icons-png.flaticon.com/512/1995/1995574.png",
+      },
+      {
+        name: "Teamwork",
+        image:
+          "https://cdn-icons-png.flaticon.com/512/1534/1534934.png",
+      },
     ],
   },
 
@@ -202,7 +261,7 @@ export const experiences = [
 export const education = [
   {
     id: 0,
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTanLlgMSYtKBSZ50EvtF3C8V0iQbNGrb7ug9cvwP5uZX0gU7o-h-aBvIbOEoBLdrFVJJU&usqp=CAU",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREmy3M3B8Ufbm6CvY52oH4OoECvrBoeUCDuQ&s",
     school: "Vishwakarma Institute Of Information Technology",
     date: "Aug 2023- Aug 2027",
     grade: "8.68 CGPA",
@@ -211,7 +270,7 @@ export const education = [
   },
   {
     id: 1,
-    img: "https://zbpatil.in/wp-content/uploads/2021/06/cropped-logo-170x145.png",
+    img: "https://allegiance-educare.in/storage/uploads/colleges/thumb/250_250_13976454495463.JPG",
     school: "Zulal Bhilajirao Patil",
     date: "Apr 2021 - Apr 2023",
     grade: "72%",
@@ -236,7 +295,7 @@ export const projects = [
     date: "May 2024 - Jun 2024",
     description:
       "Developed a comprehensive Doctor Appointment Booking System with three user roles: Patient, Doctor, and Admin, ensuring seamless access through secure authentication and authorization. Implemented key features such as appointment scheduling, profile management, and patient record maintenance. Integrated Razorpay for secure and efficient payment processing, and deployed the application on Render for live accessibility.",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS39goon_ccSj1SgUZObvSo_N71I04KoV35GA&s",
+    image: require("../images/healthbridge.png"),
     tags: [
       "React",
       "Node.js",
@@ -254,11 +313,11 @@ export const projects = [
   },
   {
     id: 2,
-    title: "Wanderlust Stays",
+    title: "Wanderlust",
     date: "Feb 2024 - Mar 2024",
     description:
       "Full Stack Web Application inspired by Airbnb, allowing users to book stays and experiences. Over 50 listings and 30+ active users. The webapp uses MVC architecture, integrates 10 external APIs, and allows users to manage bookings, add/remove listings, and leave reviews. Implemented user authentication for 200+ active users, added listing management and booking features, and integrated advanced search options with 10+ filters.",
-    image: "https://pbs.twimg.com/profile_images/1921980469052375040/E9jrHsYu_400x400.png",
+    image: require("../images/wanderlust.png"),
     tags: [
       "MongoDB",
       "Node.js",
@@ -270,16 +329,16 @@ export const projects = [
       "MVC"
     ],
     category: "web app",
-    github: "https://github.com/yourusername/wanderlust-stays",
+    github: "https://github.com/Aashish07-Alpha/wanderlust-stays",
     webapp: "https://wanderlust-stays.onrender.com",
   },
   {
     id: 3,
-    title: "Financial Advisory Platform",
+    title: "FinAdvice",
     date: "Mar 2024 - Apr 2024",
     description:
       "Developed a comprehensive financial advisory website providing investment strategies and portfolio management tools. Integrated real-time market data from 5+ financial APIs. Designed AI-powered investment strategies and automated portfolio analysis tools that optimize asset allocation and generate personalized recommendations for users.",
-    image: "https://okcredit-blog-images-prod.storage.googleapis.com/2020/11/advisor-1.jpg",
+    image: require("../images/finadvice.png"),
     tags: [
       "MongoDB",
       "Node.js",
@@ -291,11 +350,29 @@ export const projects = [
       "AI"
     ],
     category: "web app",
-    github: "https://github.com/yourusername/financial-advisory-platform",
-    webapp: "https://financial-advisory.onrender.com",
+    github: "https://github.com/Aashish07-Alpha/finadvice",
+    webapp: "https://finadvisorapp.vercel.app/",
   },
 ];
 
+export const achievements = [
+  {
+    id: 1,
+    title: "Top 5 Finalist – InnoVetch Hackathon 2.0 (VIT Pune)",
+    date: "July 2025",
+    description: "Secured internship opportunity at Nextch; ranked top 5 among 250+ teams for innovative AI-based solution.",
+    category: "Hackathon",
+    image: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+  },
+  {
+    id: 2,
+    title: "3rd Place – Web Coding Challenge (College Fest)",
+    date: "March 2024",
+    description: "Developed a scalable web solution under timed constraints, optimizing load time by 25%.",
+    category: "Competition",
+    image: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+  },
+];
 
 export const TimeLineData = [
   { year: 2017, text: "Started my journey" },

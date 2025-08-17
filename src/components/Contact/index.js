@@ -98,12 +98,21 @@ const ContactInputMessage = styled.textarea`
   color: ${({ theme }) => theme.text_primary};
   border-radius: 12px;
   padding: 12px 16px;
+  resize: vertical;
+  min-height: 120px;
   &:focus {
     border: 1px solid ${({ theme }) => theme.primary};
   }
 `
 
-const ContactButton = styled.input`
+const ErrorMessage = styled.div`
+  color: #ff6b6b;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 8px;
+`
+
+const ContactButton = styled.button`
   width: 100%;
   text-decoration: none;
   text-align: center;
@@ -118,6 +127,19 @@ const ContactButton = styled.input`
   color: ${({ theme }) => theme.text_primary};
   font-size: 18px;
   font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(271, 100%, 50%, 0.3);
+  }
+  
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+  }
 `
 
 
@@ -126,16 +148,43 @@ const Contact = () => {
 
   //hooks
   const [open, setOpen] = React.useState(false);
+  const [loading, setLoading] = React.useState(false);
+  const [error, setError] = React.useState('');
   const form = useRef();
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setLoading(true);
+    setError('');
+    
+    // Basic validation
+    const formData = new FormData(form.current);
+    const email = formData.get('from_email');
+    const name = formData.get('from_name');
+    const subject = formData.get('subject');
+    const message = formData.get('message');
+    
+    if (!email || !name || !subject || !message) {
+      setError('Please fill in all fields');
+      setLoading(false);
+      return;
+    }
+    
+    if (!email.includes('@')) {
+      setError('Please enter a valid email address');
+      setLoading(false);
+      return;
+    }
+
     emailjs.sendForm('service_tox7kqs', 'template_nv7k7mj', form.current, 'SybVGsYS52j2TfLbi')
       .then((result) => {
         setOpen(true);
         form.current.reset();
+        setLoading(false);
       }, (error) => {
         console.log(error.text);
+        setError('Failed to send email. Please try again.');
+        setLoading(false);
       });
   }
 
@@ -148,11 +197,14 @@ const Contact = () => {
         <Desc>Feel free to reach out to me for any questions or opportunities!</Desc>
         <ContactForm ref={form} onSubmit={handleSubmit}>
           <ContactTitle>Email Me 🚀</ContactTitle>
-          <ContactInput placeholder="Your Email" name="from_email" />
-          <ContactInput placeholder="Your Name" name="from_name" />
-          <ContactInput placeholder="Subject" name="subject" />
-          <ContactInputMessage placeholder="Message" rows="4" name="message" />
-          <ContactButton type="submit" value="Send" />
+          <ContactInput placeholder="Your Email" name="from_email" type="email" required />
+          <ContactInput placeholder="Your Name" name="from_name" required />
+          <ContactInput placeholder="Subject" name="subject" required />
+          <ContactInputMessage placeholder="Message" name="message" required />
+          {error && <ErrorMessage>{error}</ErrorMessage>}
+          <ContactButton type="submit" disabled={loading}>
+            {loading ? 'Sending...' : 'Send Message'}
+          </ContactButton>
         </ContactForm>
         <Snackbar
           open={open}
