@@ -88,7 +88,7 @@ function Footer() {
   return (
     <FooterContainer>
       <FooterWrapper>
-        <Logo>Aashish Suryawanshi</Logo>
+        <Logo>Bhavesh Patil</Logo>
         <Nav>
           <NavLink href="#about">About</NavLink>
           <NavLink href="#skills">Skills</NavLink>
@@ -103,7 +103,7 @@ function Footer() {
           <SocialMediaIcon href={Bio.insta} target="display"><InstagramIcon /></SocialMediaIcon>
         </SocialMediaIcons> */}
         <Copyright>
-          &copy; 2025 Aashish Suryawanshi. All rights reserved.
+          &copy; 2025 Bhavesh Patil. All rights reserved.
         </Copyright>
 
       </FooterWrapper>

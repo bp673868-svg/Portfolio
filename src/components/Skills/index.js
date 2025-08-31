@@ -9,6 +9,7 @@ justify-content: center;
 position: relative;
 z-index: 1;
 align-items: center;
+margin-bottom: 40px;
 `
 
 const Wrapper = styled.div`

@@ -10,9 +10,9 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import Experience from "./components/Experience";
+// import Experience from "./components/Experience";
 import Education from "./components/Education";
-import Achievements from "./components/Achievements";
+// import Achievements from "./components/Achievements";
 import ProjectDetails from "./components/ProjectDetails";
 import styled from "styled-components";
 
@@ -25,7 +25,8 @@ const Body = styled.div`
 const Wrapper = styled.div`
   background: linear-gradient(38.73deg, rgba(204, 0, 187, 0.15) 0%, rgba(201, 32, 184, 0) 50%), linear-gradient(141.27deg, rgba(0, 70, 209, 0) 50%, rgba(0, 70, 209, 0.15) 100%);
   width: 100%;
-  clip-path: polygon(0 0, 100% 0, 100% 100%,30% 98%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%,30% 95%, 0 100%);
+  padding: 40px 0;
 `
 function App() {
   const [darkMode, setDarkMode] = useState(true);
@@ -39,12 +40,12 @@ function App() {
           <HeroSection />
           <Wrapper>
             <Skills />
-            <Experience />
+            {/* <Experience /> */}
           </Wrapper>
           <Projects openModal={openModal} setOpenModal={setOpenModal} />
           <Wrapper>
             <Education />
-            <Achievements />
+            {/* <Achievements /> */}
             <Contact />
           </Wrapper>
           <Footer />
